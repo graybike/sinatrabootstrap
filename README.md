@@ -1,5 +1,17 @@
 # Sinatra Bootstrap, v 2.0
 
+## Setup
+
+```
+npm install
+[output]
+bundle install
+[output]
+foreman start
+[BOOM]
+```
+
+
 ## Ingredients
 Here are a few of the things that come included out of the box with Sinatra Bootstrap.
 
@@ -12,11 +24,9 @@ Here are a few of the things that come included out of the box with Sinatra Boot
 ### CSS
   * Sass
   * Bourbon
-  * Twitter Bootstrap? bootstrap-sass?
 
 ### JavaScript
   * jQuery
-  * Bootstrap.js?
 
 ### Database
   * PostgreSQL
@@ -25,6 +35,9 @@ Here are a few of the things that come included out of the box with Sinatra Boot
 ### Taskrunner
   * Grunt
 
+### Infrastructure
+  * Procfile to ease the deploy to Heroku.
 
 ### Extras
+
   * [Rack Deflater](https://github.com/rack/rack/blob/master/lib/rack/deflater.rb) and [some instructions](http://robots.thoughtbot.com/content-compression-with-rack-deflater)
