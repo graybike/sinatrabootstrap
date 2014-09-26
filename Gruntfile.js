@@ -7,28 +7,28 @@ module.exports = function(grunt) {
         concat: {   
             dist: {
                 src: [
-                    'js/libs/*.js', // All JS in the libs folder
-                    'js/*.js'  // This specific file
+                    'app/assets/javasrcipts/libs/*.js', // All JS in the libs folder
+                    'app/assets/javascripts/*.js'  // This specific file
                 ],
-                dest: 'public/js/app.js',
+                dest: 'public/javascripts/app.js',
             }
         },
         uglify: {
             build: {
-                src: 'public/js/app.js',
-                dest: 'public/js/app.min.js'
+                src: 'public/javascripts/app.js',
+                dest: 'public/javascripts/app.min.js'
             }
         },
         watch: {
             scripts: {
-                files: ['js/*.js'],
+                files: ['app/assets/javascripts/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
                 },
             },
             css: {
-                files: ['stylesheets/*.scss'],
+                files: ['app/assets/stylesheets/*.scss'],
                 tasks: ['sass'],
                 options: {
                     spawn: false,
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
                     style: 'compressed'
                 },
                 files: {
-                    'public/stylesheets/application.css': 'stylesheets/application.scss'
+                    'public/stylesheets/application.css': 'app/assets/stylesheets/application.scss'
                 }
             } 
         }
