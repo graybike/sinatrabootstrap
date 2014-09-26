@@ -1,0 +1,7 @@
+.bundle/
+.sass-cache/
+.DS_Store
+tmp/**/*
+.env
+node_modules
+.npm-debug.log
