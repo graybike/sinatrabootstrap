@@ -2,13 +2,25 @@
 
 ## Setup
 
-```
-npm install
-[output]
-bundle install
-[output]
-foreman start
-```
+* Install all the Grunt / NPM stuff
+  ```
+  $> npm install
+  ```
+  
+* Install all the gems required for this project
+  ```
+  $> bundle install
+  ```
+
+* Make sure Postgres is installed on your system, and then, open up your psql console and run:
+  ```
+  $> create database sinatrabootstrap;
+  ```
+
+* From the root directory of this app, run any migrations:
+  ```
+  $> rake db:migrate
+  ```
 
 ## Running
 
@@ -27,8 +39,8 @@ Here are a few of the things that come included out of the box with Sinatra Boot
   * [Haml](https://github.com/haml/haml)
 
 ### CSS
-  * Sass
-  * Bourbon
+  * Sass using [grunt-contrib-sass](https://github.com/gruntjs/grunt-contrib-sass)
+  * Bourbon via [this article](http://syropia.net/journal/how-to-use-bourbon-with-gruntjs)
 
 ### JavaScript
   * jQuery
