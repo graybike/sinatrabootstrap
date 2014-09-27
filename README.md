@@ -10,6 +10,13 @@ bundle install
 foreman start
 ```
 
+## Running
+
+```
+$> grunt watch
+$> foreman start
+```
+
 ## Ingredients
 Here are a few of the things that come included out of the box with Sinatra Bootstrap.
 
