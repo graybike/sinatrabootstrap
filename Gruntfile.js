@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
-        concat: {   
+        concat: {
             dist: {
                 src: [
                     'app/assets/javasrcipts/libs/*.js', // All JS in the libs folder
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
                 files: {
                     'public/stylesheets/application.css': 'app/assets/stylesheets/application.scss'
                 }
-            } 
+            }
         }
     });
 
