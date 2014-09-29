@@ -28,9 +28,13 @@ module SinatraBootstrap
           :secure       => production?,
           :expire_after => 31557600, # 1 year
           :secret       => ENV['SESSION_SECRET']
+      register Sinatra::Flash
     end
 
+
+
     use Rack::Deflater
+    use SinatraBootstrap::Routes::Auth
     use SinatraBootstrap::Routes::Client
   end
 end

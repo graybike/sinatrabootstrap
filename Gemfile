@@ -13,3 +13,8 @@ gem 'haml'
 gem 'sequel'
 gem 'sinatra-sequel'
 gem 'pg'
+
+# Authentication
+gem 'warden'
+gem 'sinatra-flash'
+gem 'bcrypt'

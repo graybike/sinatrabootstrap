@@ -3,6 +3,7 @@ module SinatraBootstrap
     class Client < Base
       
       get '/' do
+        warden.authenticate!
         haml :index
       end
 
