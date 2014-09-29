@@ -1,3 +1,6 @@
+- if flash[:error]
+  %h3 #{flash[:error]}
+
 %form{:action => "/login", :method => "post"}
   %p
     E-mail:

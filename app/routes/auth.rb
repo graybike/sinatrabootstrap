@@ -25,18 +25,18 @@ module SinatraBootstrap
         def authenticate!
           user = User.first(email: params['user']['email'])
 
-          if user.nil?
-            fail! "The email you entered does not exist."
-          elsif user.authenticate params['user']['password']
+          if !user.nil? && user.authenticate(params['user']['password'])
             success! user
           else
-            fail! "Could not log in"
+            fail! "The email & password combination you entered could not be found."
           end
         end
       end
 
       # Authentication routes.
       get '/login' do
+        redirect '/' if warden.authenticated?
+          
         haml :login
       end
 
@@ -62,7 +62,7 @@ module SinatraBootstrap
       post '/unauthenticated' do
         session[:return_to] = env['warden.options'][:attempted_path]
         puts env['warden.options'][:attempted_path]
-        flash[:error] = warden.message || "You must log in"
+        flash[:error] = warden.message || "Please log in before continuing."
         redirect '/login'
       end
 
