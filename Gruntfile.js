@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         concat: {
             dist: {
                 src: [
-                    'app/assets/javasrcipts/libs/*.js', // All JS in the libs folder
+                    'app/assets/javascripts/libs/*.js', // All JS in the libs folder
                     'app/assets/javascripts/*.js'  // This specific file
                 ],
                 dest: 'public/javascripts/app.js',
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['app/assets/javascripts/*.js'],
+                files: ['app/assets/javascripts/libs/*.js','app/assets/javascripts/*.js'],
                 tasks: ['concat', 'uglify'],
                 options: {
                     spawn: false,
