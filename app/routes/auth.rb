@@ -1,3 +1,5 @@
+# Much of this code was borrowed from: http://skli.se/2013/03/08/sinatra-warden-auth/
+
 module SinatraBootstrap
   module Routes
     class Auth < Base

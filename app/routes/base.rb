@@ -12,7 +12,7 @@ module SinatraBootstrap
         end
       
         def current_user
-          warden.user
+          warden.authenticated? ? User[warden.user] : nil
         end
       end
     end
